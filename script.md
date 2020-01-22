@@ -3,15 +3,15 @@ Alright! Let's get started.
 So, you've been given a function that returns a promise.  
 We're going to be working with this dog breed api.
 
-Taking a look at the code here, you can see that we're importing a function
-called `getDogBreeds`, we're not going to look at the implementation of it,
+Taking a look at the code here, you can see that we're importing a utilities
+called `utilties`, and we have a function in there call `getDogBreeds`, we're not going to look at the implementation of it,
 all we know is that it returns a promise, and inside of that promise contains
 the values that we want to look at.
 
-Let's output the result of `getDogBreeds` and see what we're working with.
+Let's output the result of `utilities.getDogBreeds` and see what we're working with.
 
 ```node
-console.log(getDogBreeds())
+console.log(utilities.getDogBreeds())
 ```
 
 You can in the terminal the output is a Promise that says it is pending.
@@ -33,7 +33,7 @@ Let's make this change.
 function outputDogBreeds(dogBreeds) {
   console.log(dogBreeds)
 }
-getDogBreeds().then(outputDogBreeds)
+utilities.getDogBreeds().then(outputDogBreeds)
 ```
 
 Great, now let's look look further into this function to understand it.
@@ -55,7 +55,7 @@ inline if you want to.
 Let's make that change
 
 ```js
-getDogBreeds().then(function(breeds) {
+utilities.getDogBreeds().then(function(breeds) {
   console.log(breeds)
 })
 ```
@@ -65,7 +65,7 @@ And looking at the terminal, we can see that it's stil outputting the breeds.
 And lastly, since all we're doing is outputting whatever value gets resolved, we can just pass `console.log` directly.
 
 ```js
-getDogBreeds().then(console.log)
+utilities.getDogBreeds().then(console.log)
 ```
 
 And we can see it's still outputting on the terminal.

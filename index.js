@@ -1,1 +1,2 @@
-const { getDogBreeds } = require("./utilities")
+const utilities = require("./utilities")
+utilities.getDogBreeds().then(console.log)
