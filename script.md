@@ -3,8 +3,8 @@ Alright! Let's get started.
 So, you've been given a function that returns a promise.  
 We're going to be working with this dog breed api.
 
-Taking a look at the code here, you can see that we're importing a utilities
-called `utilties`, and we have a function in there call `getDogBreeds`, we're not going to look at the implementation of it,
+Taking a look at the code here, you can see that we're importing a utilities file
+called `utilties`, and we have a function in there called `getDogBreeds`, we're not going to look at the implementation of it,
 all we know is that it returns a promise, and inside of that promise contains
 the values that we want to look at.
 
@@ -14,7 +14,7 @@ Let's output the result of `utilities.getDogBreeds` and see what we're working w
 console.log(utilities.getDogBreeds())
 ```
 
-You can in the terminal the output is a Promise that says it is pending.
+You can see in the terminal the output is a Promise that says it is pending.
 
 We're expecting to get an array of objects that have names and ids.
 So we know that this isn't right.
@@ -36,7 +36,9 @@ function outputDogBreeds(dogBreeds) {
 utilities.getDogBreeds().then(outputDogBreeds)
 ```
 
-Great, now let's look look further into this function to understand it.
+And you can see in the terminal, we have some dog breeds getting printed.
+
+Let's look look further into this function to understand it.
 
 When `getDogBreeds()` is invoked, it returns a promise, in order to resolve that promise and get a value out of it.
 We need to use the `.then` callback. Then takes in a function as its argument, as you can see here.
@@ -47,7 +49,8 @@ Here we named it `dogBreeds`, we can name that whatever we want. Let's make that
 
 Let's rename dogBreeds to be just `breeds`
 
-Now we can that it doesn't matter what we name the variable passed into outputDogBreeds.
+Now we can see that it doesn't matter what we name the variable passed into outputDogBreeds.
+The terminal still outputs the same value.
 
 There is another way you can pass the function into then, you can actually just declare your function
 inline if you want to.
@@ -60,7 +63,7 @@ utilities.getDogBreeds().then(function(breeds) {
 })
 ```
 
-And looking at the terminal, we can see that it's stil outputting the breeds.
+And looking at the terminal, we can see that it's still outputting the breeds.
 
 And lastly, since all we're doing is outputting whatever value gets resolved, we can just pass `console.log` directly.
 
